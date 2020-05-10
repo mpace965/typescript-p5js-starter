@@ -4,6 +4,7 @@
   "description": "Starter repo for p5js",
   "author": "Matt Pace",
   "license": "MIT",
+  "main": "dist/bundle.js",
   "scripts": {
     "watch": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
