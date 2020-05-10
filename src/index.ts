@@ -8,7 +8,7 @@ function sketch(p: p5) {
     y: 100,
   };
   p.setup = () => {
-    p.createCanvas(800, 800);
+    p.createCanvas(p.windowWidth, p.windowHeight);
   };
 
   p.draw = () => {
@@ -16,6 +16,15 @@ function sketch(p: p5) {
     p.fill(255);
     p.rect(point.x, point.y, 50, 50);
     point = pointFn(point);
+  };
+
+  p.mousePressed = () => {
+    let fs = p.fullscreen();
+    p.fullscreen(!fs);
+  };
+
+  p.windowResized = () => {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
   };
 }
 

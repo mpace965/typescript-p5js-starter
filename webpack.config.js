@@ -8,8 +8,13 @@ module.exports = (env, argv) => {
   return {
     entry: "./src/index.ts",
     devtool: "source-map",
+    devServer: {
+      host: "0.0.0.0",
+    },
     plugins: [
-      new HtmlWebpackPlugin(),
+      new HtmlWebpackPlugin({
+        template: "./src/index.html",
+      }),
       new WebpackCdnPlugin({
         modules: [
           {
