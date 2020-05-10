@@ -10,6 +10,7 @@ module.exports = (env, argv) => {
     devtool: "source-map",
     devServer: {
       host: "0.0.0.0",
+      publicPath: "/",
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -43,6 +44,7 @@ module.exports = (env, argv) => {
       filename: "bundle.js",
       path: path.resolve(__dirname, "dist"),
       sourceMapFilename: "bundle.js.map",
+      publicPath: ".",
     },
   };
 };
